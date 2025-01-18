@@ -7,7 +7,7 @@ export const Header = ()=>{
         <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition duration-300  dark:text-white  dark:hover:text-blue-600">
-            Logo
+            <img src="logo.png" className='w-[90px]' />
         </Link>
         <div className="hidden md:flex space-x-8 items-center">
             <Link href="/" className="text-gray-700 hover:text-blue-600 transition duration-300  dark:text-white  dark:hover:text-blue-600">
