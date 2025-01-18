@@ -7,7 +7,7 @@ export const connect = async () => {
   }
   try {
     await mongoose.connect(process.env.MONGODB_URL, {
-      dbName: "popcornpicks",
+      dbName: "PopcornPick",
       useNewUrlPrase: true,
       useUnifiedTopology: true,
     });
