@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { DarkMode } from './DarkMode'
+import { SignedIn, SignedOut,UserButton } from '@clerk/nextjs'
 export const Header = ()=>{
     return<>
     <header className="fixed w-full bg-white shadow-md z-50 dark:bg-black">
@@ -18,9 +19,14 @@ export const Header = ()=>{
             <Link href="/movies" className="text-gray-700 hover:text-blue-600 transition duration-300  dark:text-white dark:hover:text-blue-600">
             Movies
             </Link>
-            <Link href="/signIn" className="bg-blue-600 text-white px-4 py-2  dark:text-white rounded-full hover:bg-blue-700 transition duration-300">
+            <SignedIn>
+                <UserButton />
+            </SignedIn>
+            <SignedOut>
+            <Link href="/sign-in" className="bg-blue-600 text-white px-4 py-2  dark:text-white rounded-full hover:bg-blue-700 transition duration-300">
             Sign In
             </Link>
+            </SignedOut>
             <div className="flex items-end gap-4" >
                 <DarkMode />
             </div>
