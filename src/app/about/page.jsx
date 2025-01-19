@@ -24,6 +24,9 @@ function About() {
         <p className="mb-4">
             This app is built with React js, Tailwind CSS, Next js , mongoDb and clerk. You can find the source code on <a href="https://github.com/kareem1207/Movie-Recommendation" target="_blank"className="hover:underline text-purple-600 visited:text-purple-600"> Github </a>
         </p>
+        <p className="mb-4">
+            In future I will update trending and Top rated session and also add a search bar to search for movies and tv shows.
+        </p>
     </div>
 </div>
   )

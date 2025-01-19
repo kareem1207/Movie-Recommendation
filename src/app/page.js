@@ -1,9 +1,25 @@
-export default function Home() {
+import { Results } from "@/components/Results";
+import { getBaseUrl } from "@/utils/baseUrl";
+
+async function getData() {
+  const baseUrl = getBaseUrl();
+  const res = await fetch(`${baseUrl}/api/movies`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const data = await getData();
+
   return (
     <>
-      <h1 className="text-red-400 text-[10rem] flex justify-center">
-        Hello World
-      </h1>
+      <Results data={data} />
     </>
   );
 }
