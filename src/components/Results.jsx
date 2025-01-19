@@ -21,6 +21,11 @@ export const Results = ({ data }) => {
               {item.release_date || item.first_air_date}
               <span className="ml-2">⭐ {item.vote_average}</span>
             </p>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300">
+                <a href={`movies/${item.title || item.name}`}>
+                  More Info
+                </a>
+              </button>
           </div>
         ))} 
       </div>
