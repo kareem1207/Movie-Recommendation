@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Providers } from "@/components/Themes";
 import { ClerkProvider } from "@clerk/nextjs";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "PopcornPicks - Your Movie Destination",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
           <body>
             <Providers>
               <Header />
+              <Navbar />
               {children}
               <Footer />
             </Providers>

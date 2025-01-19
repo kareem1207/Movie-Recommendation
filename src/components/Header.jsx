@@ -3,7 +3,7 @@ import { DarkMode } from './DarkMode'
 import { SignedIn, SignedOut,UserButton } from '@clerk/nextjs'
 export const Header = ()=>{
     return<>
-    <header className="fixed w-full bg-white shadow-md z-50 dark:bg-black">
+    <header className="flex relative w-full bg-white shadow-md z-50 dark:bg-black">
         <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition duration-300  dark:text-white  dark:hover:text-blue-600">
