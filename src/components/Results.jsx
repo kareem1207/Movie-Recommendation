@@ -22,7 +22,7 @@ export const Results = ({ data }) => {
               <span className="ml-2">⭐ {item.vote_average}</span>
             </p>
               <button className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300">
-                <a href={`movies/${item.title || item.name}`}>
+                <a href={`movies/${(item.title ? item.title.replace(/\./g, '') : item.name ? item.name.replace(/\./g, '') : '')}`}>
                   More Info
                 </a>
               </button>

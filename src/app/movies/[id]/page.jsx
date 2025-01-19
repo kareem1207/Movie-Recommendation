@@ -9,7 +9,7 @@ export default function SearchPage() {
 
   // Get movie title from URL path parameter and decode it
   const movieTitle = params.id ? decodeURIComponent(params.id) : '';
-  
+
   useEffect(() => {
     if (movieTitle) {
       searchGoogle();
